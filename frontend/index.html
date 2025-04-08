@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href=" https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap&quot; rel=" stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Live dos melhores</title>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <section id='cartoes'>
+
+    </section>
+    <section id="form">
+        <form id="myForm" action="" method="post">
+            <label for="nick">Nick:</label>
+            <input type="text" id="nick" name="nick" required />
+
+            <label>Moderador:</label>
+            <label><input type="radio" name="moderador" value="sim" required> Sim</label>
+            <label><input type="radio" name="moderador" value="nao" required> Não</label>
+
+            <label>Sub:</label>
+            <label><input type="radio" name="sub" value="sim" required> Sim</label>
+            <label><input type="radio" name="sub" value="nao" required> Não</label>
+
+            <label for="tipo_id">Tipo ID:</label>
+            <select id="tipo_id" name="tipo_id" required>
+            </select>
+
+            <label for="foto">URL da Foto:</label>
+            <input type="text" id="foto" name="foto" required />
+
+            <button type="submit">Enivar</button>
+        </form>
+    </section>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
