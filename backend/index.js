@@ -26,6 +26,18 @@ app.get("/viewers", async (req, res) => {
   const viewer = await knexDb("viewer").select("*");
   res.status(200).json({ viewer });
 });
+
+app.get("/tipos", async (req, res) => {
+  const allTipos = await knexDb("tipo").select("*");
+  res.status(200).json({ allTipos });
+});
+
+app.post("/viewer", async (req, res) => {
+  const { nome, nick, tipo_id, foto, moderador } = req.body;
+  await knexDb("viewer").insert({ nome, nick, tipo_id, foto, moderador });
+  res.status(200).json({ message: "Usuário foi isnerido com sucesso" });
+});
+
 app.listen(port, () => {
   console.log(`Rodando na porta ${port}......`);
 });
