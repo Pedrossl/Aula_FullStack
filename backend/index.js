@@ -27,6 +27,12 @@ app.get("/viewers", async (req, res) => {
   res.status(200).json({ viewer });
 });
 
+app.get("/viewer/:id", async (req, res) => {
+  const { id } = req.params;
+  const viewer = await knexDb("viewer").select("*").where({ id }).first();
+  res.json(viewer);
+});
+
 app.get("/tipos", async (req, res) => {
   const allTipos = await knexDb("tipo").select("*");
   res.status(200).json({ allTipos });

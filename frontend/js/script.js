@@ -15,6 +15,9 @@ async function carregaDados() {
                 <h2>${item.nick}</h2>
                 <h3>${item.nome}</h3>
                 <p>Moderador: ${item.moderador == 1 ? "sim" : "não"}</p>
+                <button onclick="location.href='vermais.html?id=${
+                  item.id
+                }'"> Ver mais </button>
             </div>
         </div>`;
     })
